@@ -51,7 +51,7 @@ function App() {
       <Route path='/search' element={<Search/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/admin/*' element={<Sidebar/>}>
+      <Route path='/admin' element={<Sidebar/>}>
       <Route index element={<Dashboard />} />
       <Route path="addproducts" element={<AddProducta />} />
       <Route path="allproducts" element={<Allproducts/>} />

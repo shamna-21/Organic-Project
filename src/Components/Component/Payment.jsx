@@ -4,10 +4,11 @@ import { updateForm } from '../redux/formSlice';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function Payment() {
-  const navigate=useNavigate()
-    const dispatch=useDispatch()
-    const location=useLocation()
-    const {cartItems,totalPrice}=location.state || { cart: [], totalPrice: 0 }; 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const location = useLocation();
+  const { cartItems, totalPrice } = location.state || { cartItems: [], totalPrice: 0 };
+
   const [formData, setFormData] = useState({
     name: '',
     cardNumber: '',
@@ -29,175 +30,178 @@ function Payment() {
       [e.target.name]: e.target.value,
     });
   };
-  
-  const handleClick = () => {
-   try{
-    const userId = localStorage.getItem('id');
-    
-    dispatch(updateForm({ userId, formData ,cartItems }))
-    alert('Successfull')
-   
-    navigate('/')
-   
 
-   }catch(err){
-    alert(err)
-   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    try {
+      const userId = localStorage.getItem('id');
+      dispatch(updateForm({ userId, formData, cartItems }));
+      alert('Successful');
+      navigate('/');
+    } catch (err) {
+      alert(`Error: ${err.message}`);
+    }
   };
-  
-  
 
   return (
-    <div className='flex h-screen'>
-      <div className='w-1/3 p-4 '>
-{cartItems && (<div>
-  <table>
-    <thead>
-     <tr >
-     <th className='p-6'>Name</th>
-      <th className='p-6'>IMage</th>
-      <th className='p-6'>Price</th>
-     </tr>
-    </thead>
-   {cartItems.map((item)=>(
-    <tr>
-      <th className='p-6'>{item.name}</th>
-      <th className='p-6'><img src={item.image} alt='img' className='w-28 h-28 '/></th>
-      <th className='p-6'>{item.price}</th>
-    </tr>
-   ))}
-   <p className='p-6'>Total Price:{totalPrice}</p>
-  </table>
-</div>)}
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
+      <div style={{ width: '30%', padding: '10px', overflowY: 'auto' }}>
+        {cartItems.length > 0 && (
+          <div>
+            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+              <thead>
+                <tr>
+                  <th style={{ padding: '8px', border: '1px solid #ddd' }}>Name</th>
+                  <th style={{ padding: '8px', border: '1px solid #ddd' }}>Image</th>
+                  <th style={{ padding: '8px', border: '1px solid #ddd' }}>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems.map((item, index) => (
+                  <tr key={index}>
+                    <td style={{ padding: '8px', border: '1px solid #ddd' }}>{item.name}</td>
+                    <td style={{ padding: '8px', border: '1px solid #ddd' }}>
+                      <img src={item.image} alt="img" style={{ width: '80px', height: '80px' }} />
+                    </td>
+                    <td style={{ padding: '8px', border: '1px solid #ddd' }}>{item.price}</td>
+                  </tr>
+                ))}
+                <tr>
+                  <td colSpan="3" style={{ padding: '8px', border: '1px solid #ddd' }}>
+                    Total Price: {totalPrice}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
-     
-      <div className="pl-16 pr-16 bg-gray-100 min-h-screen flex flex-col w-2/3">
-      <h2 className="text-2xl font-bold mb-4 p-6">Payment Details</h2>
-      
-      <form onSubmit={handleClick} className="space-y-4">
-        <input
-          type="text"
-          required
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          required
-          name="cardNumber"
-          placeholder="Credit/Debit Card Number"
-          value={formData.cardNumber}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="expirationDate"
-          required
-          placeholder="MM/YY"
-          value={formData.expirationDate}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="cvv"
-          placeholder="CVV/CVC"
-          required
-          value={formData.cvv}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
 
-        <h3 className="text-xl font-semibold mt-6 mb-2">Billing Address</h3>
-        <input
-          type="text"
-          name="streetAddress"
-          required
-          placeholder="Street Address"
-          value={formData.streetAddress}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="city"
-          required
-          placeholder="City"
-          value={formData.city}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="state"
-          required
-          placeholder="State/Province/Region"
-          value={formData.state}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="zipCode"
-          required
-          placeholder="ZIP/Postal Code"
-          value={formData.zipCode}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="text"
-          name="country"
-          required
-          placeholder="Country"
-          value={formData.country}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-
-        <input
-          type="text"
-          name="phoneNumber"
-          required
-          placeholder="Phone Number"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-
-        <input
-          type="number"
-          name="price"
-          required
-          readOnly
-          placeholder="Price"
-          value={formData.price}
-          onChange={handleChange}
-          className="p-2 border border-gray-300 rounded-md w-full"
-        /><br/>
-
-        <button
-          type="submit"
-          className="bg-green-500 text-white p-2 rounded-md mt-4 w-full"
-        >
-          Pay {totalPrice}
-        </button>
-      </form>
-    </div>
-     
+      <div style={{ width: '70%', padding: '20px' }}>
+        <h2 style={{ fontSize: '24px', marginBottom: '20px' }}>Payment Details</h2>
+        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="cardNumber"
+            placeholder="Credit/Debit Card Number"
+            value={formData.cardNumber}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="expirationDate"
+            placeholder="MM/YY"
+            value={formData.expirationDate}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="cvv"
+            placeholder="CVV/CVC"
+            value={formData.cvv}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="streetAddress"
+            placeholder="Street Address"
+            value={formData.streetAddress}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            value={formData.city}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="state"
+            placeholder="State/Province/Region"
+            value={formData.state}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="zipCode"
+            placeholder="ZIP/Postal Code"
+            value={formData.zipCode}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="country"
+            placeholder="Country"
+            value={formData.country}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="Phone Number"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            required
+          />
+          <input
+            type="number"
+            name="price"
+            placeholder="Price"
+            value={formData.price}
+            style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+            readOnly
+          />
+          <button
+            type="submit"
+            style={{
+              backgroundColor: '#4CAF50',
+              color: 'white',
+              padding: '10px',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+            }}
+          >
+            Pay {totalPrice}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

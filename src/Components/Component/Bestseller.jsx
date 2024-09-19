@@ -51,35 +51,48 @@ function Bestseller() {
       <div className= "bg-white shadow-xl  h-96 w-96 p-8">
          <h1 className='text-2xl font-semibold'>Farm Fresh Fruits</h1>
          <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
-         <button className="bg-green-600 w-32 h-9 rounded-md hover:bg-green-800 shadow-md font-bold"><div className="flex justify-around "><FaArrowRight /><h1>Shop Now</h1></div></button>
+         <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 flex items-center justify-center mx-auto">
+              <FaArrowRight className="mr-2" />
+              Shop Now
+            </button>
          <img src={lemon} alt="lemon" className="w-64 h-64"/>
       </div>
       <div className= "bg-white shadow-xl  h-96 w-96 p-8">
          <h1 className='text-2xl font-semibold'>Farm Fresh Fruits</h1>
          <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
-         <button className="bg-green-600 w-32 h-9 rounded-md hover:bg-green-800 shadow-md font-bold"><div className="flex justify-around "><FaArrowRight /><h1>Shop Now</h1></div></button>
+         <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 flex items-center justify-center mx-auto">
+              <FaArrowRight className="mr-2" />
+              Shop Now
+            </button>
          <img src={leaves} alt="lemon" className="w-64 h-56"/>
       </div>
       <div className= "bg-white shadow-xl  h-96 w-96 p-8">
          <h1 className='text-2xl font-semibold'>Farm Fresh Fruits</h1>
          <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
-         <button className="bg-green-600 w-32 h-9 rounded-md hover:bg-green-800 shadow-md font-bold"><div className="flex justify-around "><FaArrowRight /><h1>Shop Now</h1></div></button>
+         <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-800 flex items-center justify-center mx-auto">
+              <FaArrowRight className="mr-2" />
+              Shop Now
+            </button>
          <img src={peanut} alt="lemon" className="w-64 h-64"/>
       </div>
      </div>
      {/* next */}
      <div className="bg-black h-40 flex justify-around items-center">
-    <div>
-      <h1 className="text-3xl text-white font-bold">Get 25% Off On Your First Purchase!</h1>
-    </div>
-    <div><button className=' flex gap-2 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors'>
-        <RiShoppingCart2Fill className='h-6 w-6 ' /> <h1> SHOP NOW</h1>
-        </button></div>
-        
-     </div>
-     <div className="h-28 bg-gray-300">
-         <h2 className="text-center font-semibold text-2xl">Try It For Free. No Registration Needed.</h2>
-     </div>
+  <div>
+    <h1 className="text-3xl text-white font-bold">Get 25% Off On Your First Purchase!</h1>
+  </div>
+  <div>
+    <button className='flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors'>
+      <RiShoppingCart2Fill className='h-6 w-6' />
+      <span>SHOP NOW</span>
+    </button>
+  </div>
+</div>
+
+<div className="h-28 bg-gray-300 flex items-center justify-center">
+  <h2 className="text-center font-semibold text-2xl">Try It For Free. No Registration Needed.</h2>
+</div>
+
     </div>
   );
 }

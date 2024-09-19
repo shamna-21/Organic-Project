@@ -17,42 +17,7 @@
           "quantity": 3
         }
       ],
-      "payment": [
-        {
-          "name": "shamna",
-          "cardNumber": "35",
-          "expirationDate": "43829",
-          "cvv": "yuoiuo",
-          "streetAddress": "housekarattupurayi;",
-          "city": "kondotty",
-          "state": "kerala",
-          "zipCode": "7632987",
-          "country": "India",
-          "phoneNumber": "987654321",
-          "email": "sherinshamna78@gmail.com",
-          "price": "37.00",
-          "order": [
-            {
-              "id": "2",
-              "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/sanitizer-300x300.jpg",
-              "name": "Pure Handpicked Red Chillies",
-              "price": 22,
-              "category": "bestproduct",
-              "description": "Handpicked red chillies for a spicy and authentic taste in your dishes.",
-              "quantity": 1
-            },
-            {
-              "id": "3",
-              "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/red-chillies-300x300.jpg",
-              "name": "Premium Hand Sanitizer",
-              "price": 15,
-              "category": "bestproduct",
-              "description": "High-quality hand sanitizer for effective hand hygiene and protection.",
-              "quantity": 1
-            }
-          ]
-        }
-      ]
+      "payment": []
     },
     {
       "id": "f535",
@@ -71,19 +36,53 @@
       "cart": [],
       "payment": [
         {
-          "name": "amal",
-          "cardNumber": "768",
-          "expirationDate": "77/88",
-          "cvv": "5679/5679",
+          "name": "sree",
+          "cardNumber": "7887",
+          "expirationDate": "5463",
+          "cvv": "89705",
           "streetAddress": "housekarattupurayi;",
-          "city": "hkkslk",
+          "city": "kondotty",
           "state": "kerala",
           "zipCode": "7632987",
           "country": "India",
           "phoneNumber": "987654321",
-          "email": "amal@gmail.com",
-          "price": "35.00",
+          "email": "sree@gmail.com",
+          "price": "22.00",
           "order": [
+            {
+              "id": "10",
+              "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/red-chillies-300x300.jpg",
+              "name": "Handpicked Red Chillies",
+              "price": 22,
+              "category": "Gloseries",
+              "description": "Freshly handpicked red chillies to add a spicy kick to your meals.",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "name": "sree",
+          "cardNumber": "7887",
+          "expirationDate": "5463",
+          "cvv": "89705",
+          "streetAddress": "housekarattupurayi;",
+          "city": "kondotty",
+          "state": "kerala",
+          "zipCode": "7632987",
+          "country": "India",
+          "phoneNumber": "987654321",
+          "email": "sree@gmail.com",
+          "price": "142.00",
+          "order": [
+            {
+              "id": "23",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_RO1Kg_PROSHOTa_360x.jpg?v=1632128015",
+              "name": "Rolled Oats",
+              "price": 22,
+              "category": "Oats",
+              "description": "Nutritious rolled oats, perfect for breakfast and baking.",
+              "quantity": 1
+            },
             {
               "id": "1",
               "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg",
@@ -91,6 +90,15 @@
               "price": 35,
               "category": "bestproduct",
               "description": "A blend of premium organic coffee beans for a rich and aromatic experience.",
+              "quantity": 3
+            },
+            {
+              "id": "5",
+              "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg",
+              "name": "Hand Sanitizer Gel",
+              "price": 15,
+              "category": "Gloseries",
+              "description": "Gel-based hand sanitizer with soothing properties for clean hands on-the-go.",
               "quantity": 1
             }
           ]
@@ -344,6 +352,14 @@
     {
       "id": "31",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQL-D8tMOUL3269AgR5CnKeGFoLvmHi727t75KFPTX6xF8G1FJ-FsHv91XJedOclaKfP4F2EFpZr03slfgujVOU3sKwn2ZfTnODFx6nGH57Waa7MRT1sWE8&usqp=CAE",
+      "name": "Quaker Multigrain Oats",
+      "price": "1000",
+      "category": "Oats",
+      "description": "Delicious granola with dark chocolate chunks for a tasty snack."
+    },
+    {
+      "id": "33",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQSWr_FUR1e_Uz7VzhRaWZ5E-rgq8hH4K8aRG_qo-bf0K6wY4X6bknOEzapvufMb2Fm6PoC9MbEp8GwEyO2zjKCalgBOH4KD3uRT5Yv6YM2&usqp=CAE",
       "name": "Quaker Multigrain Oats",
       "price": "1000",
       "category": "Oats",

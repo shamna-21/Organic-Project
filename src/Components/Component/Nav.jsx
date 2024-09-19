@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Images/organic-store-logo5.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { IoCartSharp } from "react-icons/io5";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CgProfile } from "react-icons/cg";
 import axios from "axios";
+import { updateCart } from "../redux/cartSlice";
 
 function Nav() {
   const [serachitem,setSearchitem]=useState([])
   const navigate=useNavigate()
+  const dispatch=useDispatch()
   const user = useSelector((state) => state.user.user);
   const cartCount = user?.cart?.length || 0;
  const [dropdown,setDropdown]=useState(false)
@@ -17,7 +19,10 @@ const name=localStorage.getItem('name')
   function handleprofileclick(params) {
       setDropdown(!dropdown)
   }
-  function handleLogout(params) {
+  useEffect(()=>{
+    dispatch(updateCart())
+  },[dispatch])
+  function handleLogout() {
     window.confirm('Are You Sure')
     localStorage.removeItem('id')
     navigate('/login')
