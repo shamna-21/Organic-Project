@@ -106,6 +106,174 @@
       ],
       "blocked": false,
       "admin": true
+    },
+    {
+      "id": "7ac6",
+      "name": "amna",
+      "email": "amna@gmail.com",
+      "password": "123456",
+      "cart": [],
+      "payment": [
+        {
+          "name": "SSSHA",
+          "cardNumber": "hjisi",
+          "expirationDate": "5687",
+          "cvv": "789",
+          "streetAddress": "wwww",
+          "city": "www",
+          "state": "kra",
+          "zipCode": "877667",
+          "country": "india",
+          "phoneNumber": "87675426",
+          "email": "shamna@gmail.com",
+          "price": "44.00",
+          "order": [
+            {
+              "id": "23",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_RO1Kg_PROSHOTa_360x.jpg?v=1632128015",
+              "name": "Rolled Oats",
+              "price": 22,
+              "category": "Oats",
+              "description": "Nutritious rolled oats, perfect for breakfast and baking.",
+              "quantity": 1
+            },
+            {
+              "id": "24",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_OatsFlour_PROSHOT_a_360x.jpg?v=1676622020",
+              "name": "Oats Flour",
+              "price": 22,
+              "category": "Oats",
+              "description": "Fine oats flour, great for baking and cooking.",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "name": "shamn",
+          "cardNumber": "76765645",
+          "expirationDate": "8907892615",
+          "cvv": "122/768",
+          "streetAddress": "dharul hanan",
+          "city": "malappra",
+          "state": "kerala",
+          "zipCode": "76256",
+          "country": "india",
+          "phoneNumber": "87675426",
+          "email": "shamna@gmail.com",
+          "price": "37.00",
+          "order": [
+            {
+              "id": "5",
+              "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg",
+              "name": "Hand Sanitizer Gel",
+              "price": 15,
+              "category": "Gloseries",
+              "description": "Gel-based hand sanitizer with soothing properties for clean hands on-the-go.",
+              "quantity": 1
+            },
+            {
+              "id": "24",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_OatsFlour_PROSHOT_a_360x.jpg?v=1676622020",
+              "name": "Oats Flour",
+              "price": 22,
+              "category": "Oats",
+              "description": "Fine oats flour, great for baking and cooking.",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "blocked": false
+    },
+    {
+      "id": "1949",
+      "name": "anan",
+      "email": "anan@gmail.com",
+      "password": "123456",
+      "cart": [],
+      "payment": [
+        {
+          "name": "SSSHA",
+          "cardNumber": "hjisi",
+          "expirationDate": "5687",
+          "cvv": "789",
+          "streetAddress": "wwww",
+          "city": "www",
+          "state": "kra",
+          "zipCode": "877667",
+          "country": "india",
+          "phoneNumber": "87675426",
+          "email": "shamna@gmail.com",
+          "price": "44.00",
+          "order": [
+            {
+              "id": "23",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_RO1Kg_PROSHOTa_360x.jpg?v=1632128015",
+              "name": "Rolled Oats",
+              "price": 22,
+              "category": "Oats",
+              "description": "Nutritious rolled oats, perfect for breakfast and baking.",
+              "quantity": 1
+            },
+            {
+              "id": "24",
+              "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_OatsFlour_PROSHOT_a_360x.jpg?v=1676622020",
+              "name": "Oats Flour",
+              "price": 22,
+              "category": "Oats",
+              "description": "Fine oats flour, great for baking and cooking.",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "blocked": false
+    },
+    {
+      "id": "4126",
+      "name": "anan",
+      "email": "anan@gmail.com",
+      "password": "12345",
+      "cart": [],
+      "payment": [],
+      "blocked": false
+    },
+    {
+      "id": "fa03",
+      "name": "mm",
+      "email": "mm@gmail.com",
+      "password": "12345",
+      "cart": [
+        {
+          "id": "24",
+          "image": "https://www.jiwa.in/cdn/shop/products/YUc_Jiwa_OatsFlour_PROSHOT_a_360x.jpg?v=1676622020",
+          "name": "Oats Flour",
+          "price": 22,
+          "category": "Oats",
+          "description": "Fine oats flour, great for baking and cooking.",
+          "quantity": 1
+        },
+        {
+          "id": "25",
+          "image": "https://www.jiwa.in/cdn/shop/products/SteelCutOats1_360x.jpg?v=1615199231",
+          "name": "Steel Cut Oats",
+          "price": 22,
+          "category": "Oats",
+          "description": "Hearty steel cut oats, ideal for a filling breakfast.",
+          "quantity": 1
+        }
+      ],
+      "payment": [],
+      "blocked": false
+    },
+    {
+      "id": "57b0",
+      "name": "mm",
+      "email": "mm@gmail.com",
+      "password": "12345",
+      "cart": [],
+      "payment": [],
+      "blocked": false
     }
   ],
   "products": [
@@ -113,7 +281,7 @@
       "id": "1",
       "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg",
       "name": "Organic Assorted Coffee",
-      "price": 35,
+      "price": "11",
       "category": "bestproduct",
       "description": "A blend of premium organic coffee beans for a rich and aromatic experience."
     },
@@ -204,14 +372,6 @@
       "price": 22,
       "category": "Gloseries",
       "description": "Mild face wash suitable for all skin types, leaving your skin fresh and clean."
-    },
-    {
-      "id": "13",
-      "image": "https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/face-wash-300x300.jpg",
-      "name": "Nourishing Face Wash",
-      "price": 22,
-      "category": "Gloseries",
-      "description": "Nourishing face wash with natural ingredients for a radiant complexion."
     },
     {
       "id": "14",

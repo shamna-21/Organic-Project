@@ -37,8 +37,8 @@ function Dashboard() {
                     <h3 className='font-bold text-black text-2xl'>{totalProduct}</h3>
                 </div>
                 <div className='bg-gray-300 w-full md:w-72 h-28 shadow-lg rounded-md flex flex-col justify-center items-center'>
-                    <h1 className='font-bold text-black text-2xl'>TOTAL PRODUCTS</h1>
-                    <h3 className='font-bold text-black text-2xl'>{totalProduct}</h3>
+                    <h1 className='font-bold text-black text-2xl'>TOTAL ORDERS</h1>
+                    <h3 className='font-bold text-black text-2xl'>3</h3>
                 </div>
             </div>
             

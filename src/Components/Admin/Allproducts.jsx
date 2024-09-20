@@ -15,6 +15,7 @@ function Allproducts() {
 
   function handleDelete(id) {
     dispatch(removeitem(id));
+    window.location.reload()
   }
 function handlechange(e) {
     setRecords(e.target.value.toLowerCase())
